@@ -74,17 +74,22 @@
 # MAGIC %md
 # MAGIC ## 7.5 Grant SELECT on Gold View to hr_analytics Group
 # MAGIC
-# MAGIC **Pre-requisite:** Create the `hr_analytics` and `pii_hr_access` groups in Account Console → Groups if they don't exist.
+# MAGIC **Pre-requisite:** Create the `hr_analytics` and `pii_hr_access` groups in Account.
+# MAGIC
+# MAGIC
+# MAGIC NOT ENOUGH PERMISSION
 
 # COMMAND ----------
 
 # MAGIC %sql
-# MAGIC GRANT SELECT ON VIEW hr_catalog_adi786.gold.dept_payroll_summary TO `hr_analytics`;
+# MAGIC GRANT SELECT ON VIEW hr_catalog_adi786.gold.dept_payroll_summary TO `account users`;
+# MAGIC
 
 # COMMAND ----------
 
 # MAGIC %sql
 # MAGIC SHOW GRANTS ON VIEW hr_catalog_adi786.gold.dept_payroll_summary;
+# MAGIC
 
 # COMMAND ----------
 
